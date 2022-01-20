@@ -12,12 +12,16 @@ const CheckoutPage = () => {
     <main>
       <PageHero title="checkout" />
       <Wrapper className="page">
-        <div className="empty">
-          <h2>your cart is empty</h2>
-          <Link to="/products" className="btn">
-            fill it
-          </Link>
-        </div>
+        {cart.length < 1 ? (
+          <div className="empty">
+            <h2>your cart is empty</h2>
+            <Link to="/products" className="btn">
+              fill it
+            </Link>
+          </div>
+        ) : (
+          <StripeCheckout />
+        )}
       </Wrapper>
     </main>
   );
