@@ -153,6 +153,7 @@ const Wrapper = styled.section`
   @media only screen and (max-width: 600px) {
     form {
       width: 80vw;
+      margin: 0 auto;
     }
   }
 `;
